@@ -15,4 +15,9 @@ $navbar-width: 200px;
     width: 100vw;
     display: grid;
     grid-template-columns: $navbar-width auto;
+
+    .ContentLayout{
+        padding: 20px;
+        overflow-y: auto;
+    }
 }
