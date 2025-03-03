@@ -1,0 +1,14 @@
+@import "colors";
+@import "fonts";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    background: $background-light;
+    color: #252c31;
+    font-family: $font-family-poppins;
+}
