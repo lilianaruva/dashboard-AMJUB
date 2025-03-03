@@ -8,16 +8,11 @@ $ternary-color: #0B1A51;
 $green-color: #66C94B;
 $yellow-color: #CEC394;
 $light-blue-color: #80D2F6;
-$font-family-poppins: "Poppins", sans-serif;
+$navbar-width: 200px;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    background: $background-light;
-    color: #252c31;
-    font-family: $font-family-poppins;
+.PrincipalLayout {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: $navbar-width auto;
 }

@@ -1,0 +1,55 @@
+$background-light: #EEF2FD;
+$background-white: #FFF;
+$text-color: #252C31;
+$text-color-secondary: #6D7277;
+$principal-color: #163BB7;
+$secondary-color: #D0D5EB;
+$ternary-color: #0B1A51;
+$green-color: #66C94B;
+$yellow-color: #CEC394;
+$light-blue-color: #80D2F6;
+$navbar-width: 200px;
+
+.Nav {
+    $navbar-width: 200px;
+    height: 100vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $text-color-secondary;
+
+    h1 {
+        color: white;
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease-in-out;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            opacity: 0.7;
+        }
+    }
+}
+
+.active {
+    //font-weight: bold;
+    background-color: $principal-color;
+    padding: 10px 20px;
+    color: white;
+}
+
+.inactive {
+    padding: 10px 20px;
+    color: $text-color-secondary;
+}
