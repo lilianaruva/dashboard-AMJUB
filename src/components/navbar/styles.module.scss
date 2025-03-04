@@ -1,13 +1,14 @@
-$background-light: #EEF2FD;
-$background-white: #FFF;
-$text-color: #252C31;
-$text-color-secondary: #6D7277;
-$principal-color: #163BB7;
-$secondary-color: #D0D5EB;
-$ternary-color: #0B1A51;
-$green-color: #66C94B;
-$yellow-color: #CEC394;
-$light-blue-color: #80D2F6;
+$background-light: #eef2fd;
+$background-white: #fff;
+$text-color: #252c31;
+$text-color-secondary: #6d7277;
+$principal-color: #163bb7;
+$secondary-color: #d0d5eb;
+$ternary-color: #0b1a51;
+$green-color: #66c94b;
+$yellow-color: #cec394;
+$light-blue-color: #80d2f6;
+$error-color: #ce0000;
 $navbar-width: 200px;
 
 .Nav {
@@ -19,6 +20,14 @@ $navbar-width: 200px;
     flex-direction: column;
     gap: 20px;
     color: $text-color-secondary;
+    justify-content: space-between;
+
+    .Top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: $text-color-secondary;
+    }
 
     h1 {
         color: white;
@@ -40,20 +49,39 @@ $navbar-width: 200px;
             opacity: 0.7;
         }
     }
+
+    .logo {
+        text-align: center;
+        font-weight: bold;
+    }
 }
 
 .active {
     //font-weight: bold;
     background-color: $principal-color;
-    padding: 10px 20px;
+    padding: 10px 15px;
     color: white;
 }
 
 .inactive {
-    padding: 10px 20px;
+    padding: 10px 15px;
     color: $text-color-secondary;
 }
 
 .MuiPaper-root {
     border-radius: 20px;
+}
+
+.logout {
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: $error-color;
+    text-align: center;
+    justify-content: center;
 }
