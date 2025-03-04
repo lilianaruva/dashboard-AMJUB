@@ -21,6 +21,10 @@ const initialData: UserTable[] = [
 const Table = () => {
     const [data] = useState<UserTable[]>(initialData);
 
+    const formatDateToMonthYear = (date: Date) => {
+        return new Date(date).toISOString().slice(0, 7); // Obtiene "YYYY-MM"
+    };
+
     const columns: MRT_ColumnDef<UserTable>[] = [
         {
             accessorKey: "name",
@@ -77,16 +81,18 @@ const Table = () => {
             accessorKey: "notif_date",
             header: "Fecha de Notificación",
             enableColumnFilter: true,
-            Cell: ({ row }) => (
-                <Box>{new Date(row.original.notif_date).toLocaleDateString()}</Box>
-            ),
+            Cell: ({ row }) => <Box>{new Date(row.original.notif_date).toLocaleDateString()}</Box>,
             Filter: ({ column }) => (
                 <TextField
-                    type="date"
+                    type="month" // Cambiamos de "date" a "month"
                     variant="standard"
                     onChange={(e) => column.setFilterValue(e.target.value)}
                 />
             ),
+            filterFn: (row, columnId, filterValue) => {
+                const rowDate = formatDateToMonthYear(row.original.notif_date);
+                return rowDate.startsWith(filterValue); // Compara solo "YYYY-MM"
+            },
         },
     ];
 
