@@ -6,6 +6,7 @@ import Layout from './components/layout/index.tsx'
 import Dashboard from './pages/Dashboard/index.tsx'
 import Login from './pages/Login/index.tsx'
 import Table from './pages/Table/index.tsx'
+import Credentials from './pages/Credentials/index.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,7 +14,8 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route element={<Layout />} >
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/registers' element={<Table />} />
+          <Route path='/registros' element={<Table />} />
+          <Route path='/credenciales' element={<Credentials />} />
         </Route>
         <Route path='/login' element={<Login />} />
       </Routes>
