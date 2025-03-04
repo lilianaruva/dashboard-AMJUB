@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MaterialReactTable, MRT_ColumnDef, useMaterialReactTable } from "material-react-table";
 import { Box, Switch, TextField, Tooltip } from "@mui/material";
+import styles from './styles.module.scss'
+
 export interface UserTable {
     id: number
     name: string
@@ -93,12 +95,33 @@ const Table = () => {
         data,
         enableColumnFilterModes: true,
         enablePagination: false,
+        enableDensityToggle: false,
+        enableColumnActions: false,
+        muiTablePaperProps: {
+            elevation: 0,
+            sx: {
+                borderRadius: '30px',
+            },
+        },
+        muiTableBodyProps: {
+            sx: {
+                '& tr:nth-of-type(odd) > td': {
+                    backgroundColor: '#eef2fd46',
+                },
+            },
+        },
+        muiTableContainerProps: {
+            sx: {maxHeight: '360px'}
+        },
     })
 
     return (
-        <MaterialReactTable
-            table={table}
-        />
+        <div className={styles.TablePage}>
+            <h1>Registros</h1>
+            <MaterialReactTable
+                table={table}
+            />
+        </div>
     );
 };
 

@@ -25,7 +25,7 @@ const Navbar = () => {
 
     return (
         <div className={styles.Nav}>
-            AMJUB
+            AMJUB - CC
             {routes.map((route) => (
                 <NavLink
                     key={route.path}
