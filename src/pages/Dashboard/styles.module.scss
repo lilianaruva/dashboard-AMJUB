@@ -1,0 +1,46 @@
+$background-light: #eef2fd;
+$background-white: #fff;
+$text-color: #252c31;
+$text-color-secondary: #6d7277;
+$principal-color: #163bb7;
+$secondary-color: #d0d5eb;
+$ternary-color: #0b1a51;
+$green-color: #66c94b;
+$yellow-color: #cec394;
+$light-blue-color: #80d2f6;
+$error-color: #ce0000;
+
+.Dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+
+    .Top {
+        display: flex;
+    }
+
+    .DashGrid {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 200px 200px;
+        gap: 30px;
+    }
+
+    .Card {
+        display: flex;
+        flex-direction: column;
+        background: $background-white;
+        border-radius: 20px;
+        padding: 2rem;
+
+        h6 {
+            font-size: 50px;
+        }
+
+        .title {
+            font-size: 16px;
+
+        }
+    }
+}
