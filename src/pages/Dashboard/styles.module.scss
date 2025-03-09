@@ -18,6 +18,20 @@ $error-color: #ce0000;
 
     .Top {
         display: flex;
+        justify-content: space-between;
+
+        p {
+            color: $text-color-secondary;
+            font-size: 12px;
+        }
+
+        .MuiInputBase-root {
+            border-radius: 20px !important;
+        }
+
+        input {
+            background-color: #f7f8fd;
+        }
     }
 
     .DashGrid {
@@ -40,7 +54,6 @@ $error-color: #ce0000;
 
         .title {
             font-size: 16px;
-
         }
     }
 }
